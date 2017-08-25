@@ -1,7 +1,7 @@
 " Coppied from the example .vimrc file and then modified
 "
 " Maintainer: Joel Haker
-" Last change: 04/29/17
+" Last change: 08/25/17
 
 "-------------------------------------------------------------------------------
 " => These options and commands enable some very useful features in Vim, that no 
