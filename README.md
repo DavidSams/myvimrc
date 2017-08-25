@@ -1,2 +1,2 @@
-# my-vimrc
+# myvimrc
 My working vimrc
