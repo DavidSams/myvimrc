@@ -14,6 +14,13 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" *** Only for Winows vim Version ***
+" Activate all the handy Windows key-bindings we're used to.
+if has("win64") || has("win32")
+	source $VIMRUNTIME/mswin.vim
+	behave mswin
+endif
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -59,7 +66,7 @@ if has('gui_running')
     " font & font size
     if has("gui_macvim")
         set guifont=Menlo\ Regular:h16
-    elseif has("gui_win32")
+    elseif has("gui_win64") || has("gui_win32")
         set guifont=Droid_Sans_Mono:h12
     else
         set guifont=Droid\ Sans\ Mono\ 16
