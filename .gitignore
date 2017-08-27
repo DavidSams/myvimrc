@@ -1,4 +1,5 @@
 .vim/plugged/*
+*.swp
 
 # Logs and Databases
 *.log
