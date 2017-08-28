@@ -110,18 +110,16 @@ if has('gui_running')
     "set guioptions-=m  "remove menu bar
     set guioptions-=T   "remove toolbar
     set guioptions-=r   "remove right-hand scroll bar
-    "set guioptions-=L  "remove left-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
 
-    "colorscheme badwolf
-    "colorscheme gruvbox
     "colorscheme molokai
     "colorscheme molokai_dark
+    "colorscheme pablo
     colorscheme PaperColor
 else
-    "colorscheme badwolf
-    "colorscheme gruvbox
     "colorscheme molokai
     "colorscheme molokai_dark
+    "colorscheme pablo
     colorscheme PaperColor
 endif
 
