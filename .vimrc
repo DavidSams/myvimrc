@@ -56,10 +56,45 @@ command Q q!
 
 
 "-------------------------------------------------------------------------------
+" Vim-Plug -> https://github.com/junegunn/vim-plug (plugin manager)
+"-------------------------------------------------------------------------------
+" Commands:
+" PlugInstall  -> Install plugins
+" PlugUpdate   -> Install or update plugins  
+" PlugClean[!] -> Remove unused directories (! = clean without prompt)
+" PlugUpgrade  -> Upgrade vim-plug itself
+" PlugStatus   -> Check the status of plugins
+" PlugDiff     -> Examine changes from the previous update and the pending changes
+" PlugSnapshot[!] [outputpath] -> Create script to restore current snapshot of plugins
+
+" Start Vim-plug
+call plug#begin('~/.vim/plugged')
+
+" -> Colorschemes
+Plug 'altercation/solarized'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim'
+
+" -> Plugins
+" https://github.com/junegunn/fzf.vim -> Fzf for vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
+" https://github.com/sheerun/vim-polygloti -> Comprehensive language pack 
+Plug 'sheerun/vim-polyglot' 
+" https://github.com/tpope/vim-commentary -> Commenting plugin 
+Plug 'tpope/vim-commentary' 
+
+" End &&  Initialize plugin system
+call plug#end()
+
+
+"-------------------------------------------------------------------------------
 " Colorscheme && Gui Settings for both terminal and GUI
 "-------------------------------------------------------------------------------
 " Set Term color setting to 256 colors
 set t_Co=256
+
+set background=dark
 
 if has('gui_running')
 
@@ -78,50 +113,23 @@ if has('gui_running')
     "set guioptions-=L  "remove left-hand scroll bar
 
     "colorscheme badwolf
-    colorscheme PaperColor
+    "colorscheme gruvbox
     "colorscheme molokai
     "colorscheme molokai_dark
+    colorscheme PaperColor
 else
     "colorscheme badwolf
-    colorscheme PaperColor
+    "colorscheme gruvbox
     "colorscheme molokai
     "colorscheme molokai_dark
+    colorscheme PaperColor
 endif
-
-set background=dark
 
 "augroup vimrc 
 "   autocmd!
 "   autocmd ColorScheme * highlight Normal ctermbg=none guibg=black
 "   autocmd ColorScheme * highlight NonText ctermbg=none guibg=black
 "augroup END
-
-
-"-------------------------------------------------------------------------------
-" Vim-Plug -> https://github.com/junegunn/vim-plug (plugin manager)
-"-------------------------------------------------------------------------------
-" Commands:
-" PlugInstall  -> Install plugins
-" PlugUpdate   -> Install or update plugins  
-" PlugClean[!] -> Remove unused directories (! = clean without prompt)
-" PlugUpgrade  -> Upgrade vim-plug itself
-" PlugStatus   -> Check the status of plugins
-" PlugDiff     -> Examine changes from the previous update and the pending changes
-" PlugSnapshot[!] [outputpath] -> Generate script to restore current snapshot of plugins
-
-" Start Vim-plug
-call plug#begin('~/.vim/plugged')
-
-" Plugin outside ~/.vim/plugged with post-update hook
-" fzf plugin for vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Twig syntax highlighting
-Plug 'nelsyeung/twig.vim'
-" Comenting plugin
-Plug 'tomtom/tcoment_vim'
-
-" End &&  Initialize plugin system
-call plug#end()
 
 
 "-------------------------------------------------------------------------------
