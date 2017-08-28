@@ -285,7 +285,7 @@ nmap Y y$
 "nmap <C-L> :noh<CR><C-L>
 
 " Disable highlight when <leader><cr> is pressed
-nmap <silent> <leader><cr> :noh<cr><C-L>
+nmap <silent> <leader><CR> :noh<CR><C-L>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo, so that 
 " you can undo CTRL-U after inserting a line break.
