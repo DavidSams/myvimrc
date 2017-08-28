@@ -1,11 +1,1 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/jhaker/repos/myvimrc'
-let g:netrw_dirhist_2='/home/jhaker/repos/myvimrc/.vim'
-let g:netrw_dirhist_3='/home/jhaker/repos/myvimrc'
-let g:netrw_dirhist_4='/home/jhaker/repos/myvimrc/.vim'
-let g:netrw_dirhist_5='/home/jhaker/repos/myvimrc'
-let g:netrw_dirhist_6='/home/jhaker/repos'
-let g:netrw_dirhist_7='/home/jhaker/repos/ArduinoRGBLighting'
-let g:netrw_dirhist_8='/home/jhaker/repos/ArduinoRGBLighting/WebRGB_LED'
-let g:netrw_dirhist_9='/home/jhaker/repos/myvimrc/.git'
+
