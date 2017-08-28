@@ -44,14 +44,12 @@ let mapleader = " "
 let g:mapleader = " "
 
 " Fast saving and quiting
-nmap <leader>w :w!<cr>
-nmap <leader>q :q!<cr>
+nmap <silent> <leader>w :w!<cr>
+nmap <silent> <leader>Q :q!<cr>
 
-" :W sudo saves the file 
-" (useful for handling the permission-denied error)
+" :W - sudo save (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
-
-" :Q = q! exit without any changes
+" :Q - exit without any changes
 command Q q! 
 
 
@@ -304,10 +302,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Close the current buffer
-noremap <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-noremap <leader>ba :bufdo bd<cr>
+noremap <silent> <leader><S-c> :bd<CR>
+noremap <silent> <leader><C-c> :tabclose<CR>
 
 " Move in between buffers
 noremap <leader>l :bnext<CR>
@@ -328,7 +324,8 @@ nmap <silent> <leader>R :Rex<CR>
 " Open a file in new buffer
 nnoremap <silent> <leader>f<leader> :call fzf#run({
 \   'sink': 'e',
-\   'options': '--multi'})<CR>
+\   'options': '--multi'
+\ })<CR>
 " Open a file in a new tab
 nnoremap <silent> <leader>ft :call fzf#run({
 \   'sink': 'tabedit', 
@@ -345,7 +342,7 @@ nnoremap <silent> <leader>fh :call fzf#run({
 \   'sink': 'split'
 \ })<CR>
 " Choose color scheme using fzf 
-nnoremap <silent> <leader>C :call fzf#run({
+nnoremap <silent> <leader><S-p> :call fzf#run({
 \   'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),
 \   "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),
 \   'sink': 'colo',
