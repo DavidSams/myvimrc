@@ -100,21 +100,14 @@ set background=dark
 "-------------------------------------------------------------------------------
 " Vim-Plug -> https://github.com/junegunn/vim-plug (plugin manager)
 "-------------------------------------------------------------------------------
-"
-" Commands
-"   - PlugInstall  -> Install plugins
-"   - PlugUpdate   -> Install or update plugins  
-"   - PlugClean[!] -> Remove unused directories (bang version
-"                     will clean without prompt)
-"   - PlugUpgrade  -> Upgrade vim-plug itself
-"   - PlugStatus   -> Check the status of plugins
-"   - PlugDiff     -> Examine changes from the previous update
-"                     and the pending changes
-"   - PlugSnapshot[!] [outputpath] -> Generate script for restoring
-"                                     the current snapshot of the 
-"                                     plugins
-"
-"-------------------------------------------------------------------------------
+" Commands:
+" PlugInstall  -> Install plugins
+" PlugUpdate   -> Install or update plugins  
+" PlugClean[!] -> Remove unused directories (! = clean without prompt)
+" PlugUpgrade  -> Upgrade vim-plug itself
+" PlugStatus   -> Check the status of plugins
+" PlugDiff     -> Examine changes from the previous update and the pending changes
+" PlugSnapshot[!] [outputpath] -> Generate script to restore current snapshot of plugins
 
 " Start Vim-plug
 call plug#begin('~/.vim/plugged')
@@ -317,7 +310,11 @@ noremap <leader><S-l> :tabn<CR>
 noremap <leader><S-h> :tabp<CR>
 
 " Call hilight line and column
-map <silent><leader>- :call ToggleCurline()<CR>
+map <silent> <leader>- :call ToggleCurline()<CR>
+
+" Netrw Open and return from explorer
+nmap <silent> <leader>E :Explore<CR>
+nmap <silent> <leader>R :Rex<CR>
 
 "---------------------------
 " Vim FZF mappings
