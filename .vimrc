@@ -302,8 +302,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Close the current buffer
-noremap <silent> <leader><S-c> :bd<CR>
-noremap <silent> <leader><C-c> :tabclose<CR>
+noremap <silent> <leader><S-q> :bd<CR>
+noremap <silent> <leader><C-q> :tabclose<CR>
 
 " Move in between buffers
 noremap <leader>l :bnext<CR>
@@ -318,11 +318,14 @@ map <silent> <leader>- :call ToggleCurline()<CR>
 nmap <silent> <leader>E :Explore<CR>
 nmap <silent> <leader>R :Rex<CR>
 
-"Proper clipboard copy / paste
-vmap <silent> <leader><C-c> "+yi
-vmap <silent> <leader><C-x> "+c
-vmap <silent> <leader><C-v> c<ESC>"+p
-imap <silent> <leader><<C-v> <ESC>"+pa
+" Proper clipboard copy / paste
+vmap <silent> <leader>rc "+y
+vmap <silent> <leader>rx "+c
+nmap <silent> <leader>rv k"+p
+vmap <silent> <leader>rv c<ESC>k"+p
+imap <silent> <C-v> <ESC>k"+p
+
+
 "---------------------------
 " Vim FZF mappings
 "---------------------------
