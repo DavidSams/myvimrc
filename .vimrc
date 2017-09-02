@@ -318,6 +318,11 @@ map <silent> <leader>- :call ToggleCurline()<CR>
 nmap <silent> <leader>E :Explore<CR>
 nmap <silent> <leader>R :Rex<CR>
 
+"Proper clipboard copy / paste
+vmap <silent> <leader><C-c> "+yi
+vmap <silent> <leader><C-x> "+c
+vmap <silent> <leader><C-v> c<ESC>"+p
+imap <silent> <leader><<C-v> <ESC>"+pa
 "---------------------------
 " Vim FZF mappings
 "---------------------------
